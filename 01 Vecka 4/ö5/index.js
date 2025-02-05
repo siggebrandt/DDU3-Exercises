@@ -1,0 +1,1 @@
+Lineup.init(document.querySelector("main"),)
