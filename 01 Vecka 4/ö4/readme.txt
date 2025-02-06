@@ -11,10 +11,6 @@ Instanserna ska även ha en egenskap "wins" som är en siffra och som startar me
 - Varje instans ska ha en egenskap "html" som är en referens till div-elementet som representerar den.
       Notera att konstruktorn skapar div-elementet men placerar det INTE på sidan.
 - div-elementet måste visa färgen, namnet (first middle last), vilken grej spelaren har valt (se go() nedan) och antal vinster (wins).
-
-
-
-
     Om strängen som består av first middle last är längre än 20 tecken så ska middle-name förkortas till endast första bokstaven.
     Om strängen med förkortat middle-name är fortfarande över 20 tecken så ska first-name förkortas till endast första bokstaven.
 Klassen ska ha metoderna:
@@ -23,6 +19,11 @@ Klassen ska ha metoderna:
 
 Klassen ska ha den statiska egenskapen:
 1) allPlayers, som är en array som innehåller alla instanser av Player som har skapats.
+
+
+
+
+
 
 Klassen ska ha den statiska metoden:
 1) twoRandomPlayers (), som returnerar två av de befintliga instanserna av Player. De måste vara olika.
