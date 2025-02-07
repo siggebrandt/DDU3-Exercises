@@ -1,12 +1,13 @@
-
 class C {
   constructor(p) {
     this.p1 = p;
     this._p2 = 0;
   }
-  get p2() { return this._p2; }
+  get p2() {
+    return this._p2;
+  }
   set p2(value) {
-    if (typeof value !== 'number') return;
+    if (typeof value !== "number") return;
     else this._p2 = value;
   }
 }
