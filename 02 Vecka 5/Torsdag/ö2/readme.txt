@@ -8,6 +8,13 @@ Koda en funktion som tar emot namnet på en person och returnerar antalet Shops 
 Koda en funktion som tar emot namnet på en person och som returnerar en siffra, nämligen hur många varor som har sålts i Shops som den personen äger
 
 
+
+
+
+
+
+
+
 Koda en funktion som returnerar den totala vikten av köpet (purchase) som vägde tyngst.
 
 
