@@ -1,5 +1,5 @@
 class Person {
-  static all = []
+  static all = [];
   constructor(id, alias) {
     this.constructor.all.push(this);
     this.id = id;
@@ -7,7 +7,7 @@ class Person {
   }
 }
 class Artist extends Person {
-  constructor(id, alias, country) {    
+  constructor(id, alias, country) {
     super(id, alias);
     this.country = country;
   }
@@ -19,8 +19,16 @@ class Listener extends Person {
   }
 }
 class Song {
-  static all = []
-  static Genres = ["rock", "pop", "soul", "punk"]
+  static all = [];
+  static Genres = ["rock", "pop", "soul", "punk"];
+
+  static allByGenre(genre) {
+    if (!Song.Genres.includes(genre.toLowerCase())) {
+      inputError();
+    }
+    return Song.all.filter((song) => song.genre == genre.toLowerCase());
+  }
+
   constructor(id, title, genre, artistId) {
     this.constructor.all.push(this);
     this.id = id;
@@ -28,9 +36,28 @@ class Song {
     this.genre = genre;
     this.artistId = artistId;
   }
+
+  get genre() {
+    return this._genre;
+  }
+  set genre(value) {
+    if (!Song.Genres.includes(value.toLowerCase())) {
+      inputError();
+    }
+    this._genre = value.toLowerCase();
+  }
+
+  nListeningsInMonth(month) {
+    if (month < 1 || month > 12 || !Number.isInteger(month)) {
+      inputError();
+    }
+    return Listening.all.filter(
+      (session) => this.id === session.songId && session.date.month == month
+    ).length;
+  }
 }
 class Listening {
-  static all = []
+  static all = [];
   constructor(date, listenerId, songId) {
     this.constructor.all.push(this);
     this.date = date; // {year: int, month: int, day: int}
@@ -38,6 +65,6 @@ class Listening {
     this.songId = songId;
   }
 }
-function inputError () {
+function inputError() {
   // En Error kastas här så att kodexekveringen avslutas
 }
