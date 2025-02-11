@@ -26,7 +26,7 @@ class Person {
     if (this.gender == "f" && randomIdNumber[2] % 2 == 0) {
       return (this.idNumber = randomIdNumber);
     } else if (this.gender == "m" && randomIdNumber[2] % 2 != 0) {
-      return (this.idNumber = randomIdNumber);
+      return (this.idNumber = Number(randomIdNumber));
     } else {
       this.setIdNumber();
     }
