@@ -24,14 +24,11 @@ class Student {
   static all = [];
 
   static get goodResults() {
-    let arrayOfGoodResultsStudents = [];
-    arrayOfGoodResultsStudents = Student.all.filter((student) =>
+    return Student.all.filter((student) =>
       student.courses.every(
         (course) => /* course.g && */ course.year === course.g
       )
     );
-
-    return arrayOfGoodResultsStudents;
   }
 
   constructor(data) {

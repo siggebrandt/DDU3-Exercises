@@ -18,7 +18,7 @@ class Item {
   }
 
   get pricePerKilo() {
-    return (this.price / this.weight) * 1000;
+    return this.price / (this.weight * 1000);
   }
 }
 

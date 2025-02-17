@@ -48,7 +48,11 @@ class Song {
   }
 
   nListeningsInMonth(month) {
-    if (month < 1 || month > 12 || !Number.isInteger(month)) {
+    if (
+      month < 1 ||
+      month > 12 ||
+      !Number.isInteger(month) /* month != Math.floor(month) */
+    ) {
       inputError();
     }
     return Listening.all.filter(
