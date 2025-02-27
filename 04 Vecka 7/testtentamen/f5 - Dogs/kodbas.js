@@ -20,7 +20,7 @@ class Dog {
     this.weight = weight; // Kg
     this.born = born; // year, four digits
     this.died = died; // year, four digits; 0 if dog still alive
-    this.breed = breed; // String, for example: "Boxer"
+    this.breed = breed; // String, for example: "Boxer".
     this.kennelId = kennelId; // Kennel in which the dog was born
   }
 }
